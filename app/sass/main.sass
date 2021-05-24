@@ -1408,77 +1408,78 @@ body
                     &:hover
                         background-color: #C04213
                         
-                .quantity
-                    input
-                        &::-webkit-outer-spin-button
-                            display: none
-                            margin: 0
-                        &::-webkit-inner-spin-button
-                            display: none
-                            margin: 0
-                    position: relative
-                    .input-text
-                        position: relative
-                        overflow: hidden
-                        padding: 7px 40px
-                        box-sizing: border-box
-                        box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 0.25)
-                        border-radius: 30px
-                        background: #FFFFFF
-                        border-radius: 30px
-                        height: 45px
-                        border: none
-                        width: 130px
-                        text-align: center
-                        color: #d85829
-                        font-weight: 700
-                        font-size: 18px
-                        &:focus
-                            outline: none
-                    .qty_button.plus
-                        position: absolute
-                        cursor: pointer
-                        display: block
-                        font-weight: 400
-                        height: 32px
-                        width: 32px
-                        margin: 0
-                        box-sizing: border-box
-                        font-size: 18px
-                        text-align: center
-                        outline: none
-                        background: #F3F3F3
-                        border-radius: 50%
-                        transition: all linear .2s
-                        display: flex
-                        align-items: center
-                        justify-content: center
-                        z-index: 999
-                        border: none
-                        top: 7px
-                        right: 7px
-                    .qty_button.minus
-                        position: absolute
-                        cursor: pointer
-                        display: block
-                        height: 32px
-                        font-weight: 400
-                        width: 32px
-                        margin: 0
-                        box-sizing: border-box
-                        font-size: 18px
-                        text-align: center
-                        outline: none
-                        background: #F3F3F3
-                        border-radius: 50%
-                        transition: all linear .2s
-                        display: flex
-                        align-items: center
-                        justify-content: center
-                        z-index: 999
-                        border: none
-                        top: 7px
-                        left: 7px
+.quantity
+    display: inline-block
+    input
+        &::-webkit-outer-spin-button
+            display: none
+            margin: 0
+        &::-webkit-inner-spin-button
+            display: none
+            margin: 0
+    position: relative
+    .input-text
+        position: relative
+        overflow: hidden
+        padding: 7px 40px
+        box-sizing: border-box
+        box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 0.25)
+        border-radius: 30px
+        background: #FFFFFF
+        border-radius: 30px
+        height: 45px
+        border: none
+        width: 130px
+        text-align: center
+        color: #d85829
+        font-weight: 700
+        font-size: 18px
+        &:focus
+            outline: none
+    .qty_button.plus
+        position: absolute
+        cursor: pointer
+        display: block
+        font-weight: 400
+        height: 32px
+        width: 32px
+        margin: 0
+        box-sizing: border-box
+        font-size: 18px
+        text-align: center
+        outline: none
+        background: #F3F3F3
+        border-radius: 50%
+        transition: all linear .2s
+        display: flex
+        align-items: center
+        justify-content: center
+        z-index: 999
+        border: none
+        top: 7px
+        right: 7px
+    .qty_button.minus
+        position: absolute
+        cursor: pointer
+        display: block
+        height: 32px
+        font-weight: 400
+        width: 32px
+        margin: 0
+        box-sizing: border-box
+        font-size: 18px
+        text-align: center
+        outline: none
+        background: #F3F3F3
+        border-radius: 50%
+        transition: all linear .2s
+        display: flex
+        align-items: center
+        justify-content: center
+        z-index: 999
+        border: none
+        top: 7px
+        left: 7px
 
         .product-tag
             list-style-type: none
@@ -2080,9 +2081,155 @@ body
         color: #ffffff
         background-color: #D85829 
 
-            
+/*** Thankyou  END***/
+
+
+/*** Cart Form ***/
+
+.cart-title
+    font-size: 22px
+    color: #00314C
+    font-style: normal
+    font-weight: 700
+    line-height: 27px
+    letter-spacing: 0em
+    margin-bottom: 24px
+
+
+.cart-header
+    &__item
+        color: #00314C
+        font-size: 15px
+        font-style: normal
+        font-weight: 700
+        line-height: 18px
+        letter-spacing: 0em
+
+
+
+.cart-content__wrapper
+    display: grid
+    grid-template-columns: 1fr 310px
+    grid-gap: 30px
+
+.cart-header
+    display: grid
+    grid-gap: 20px
+    grid-template-columns: 123px 1fr 1fr 1fr 1fr 25px
+    border-bottom: 1px solid #E2E2E2
+    margin-bottom: 10px
+    padding-bottom: 15px
+
+
+.cart-main__item
+    display: grid
+    position: relative
+    grid-gap: 20px
+    grid-template-columns: 123px 1fr 1fr 1fr 1fr 25px
+    border-radius: 9px
+    padding-bottom: 10px
+    padding-top: 10px
+    padding-right: 15px
+    padding-left: 15px
+    margin-bottom: 8px
+    margin-top: 18px
+    &:hover
+        box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 0.25)
+    &::before
+        content: ""
+        position: absolute
+        width: 100%
+        bottom: -10px
+        border-bottom: 1px solid #E2E2E2
+        
+        
+.product-name
+    display: flex
+    align-items: center
+    overflow: hidden
+    text-overflow: ellipsis
+    a
+        text-decoration: none
+        color: #00314C
+        font-size: 15px
+        font-style: normal
+        font-weight: 700
+        line-height: 18px
+        letter-spacing: 0em
         
 
+.product-price
+    display: flex
+    align-items: center
+    .amount
+        bdi
+            font-size: 16px
+            color: #D85829
+            font-style: normal
+            font-weight: 700
+            line-height: 16px
+            letter-spacing: 0em
 
+.product-quantity
+    display: flex
+    align-items: center
 
-/*** Thankyou  END***/
+.product-subtotal
+    display: flex
+    align-items: center
+    .amount
+        bdi
+            font-size: 16px
+            color: #D85829
+            font-style: normal
+            font-weight: 700
+            line-height: 16px
+            letter-spacing: 0em
+
+.product-thumbnail
+    a > img
+        width: 123px
+        height: 131px
+        object-fit: cover
+        border-radius: 9px
+
+.product-remove
+    display: flex
+    align-items: center
+    justify-content: center  
+    a
+        color: #C5C5C5
+        opacity: .8
+        transition: opacity .3s ease
+        &:hover
+            opacity: 1
+
+.continue-shopping__wrapper
+    text-align: center
+
+.continue-shopping
+    padding-top: 7px
+    padding-bottom: 7px
+    padding-right: 30px
+    padding-left: 30px
+    display: inline-block
+    margin-top: 28px
+    border: 2px solid #D85829
+    border-radius: 50px
+    text-decoration: none
+    color: #13324A
+    font-size: 15px
+    font-weight: 700
+    transition: all .3s ease
+    &:hover
+        color: #ffffff
+        background-color: #D85829    
+
+.cart_totals
+    position: relative
+.cart_totals-wrapper
+    .cart_totals-item  
+        display: flex
+        justify-content: space-between  
+
+/*** Cart Form END ***/
