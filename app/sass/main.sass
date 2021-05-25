@@ -495,10 +495,12 @@ body
                     border-bottom: 3px solid #D85829        
 
 .tab-content__item     
-    display: none
+    visibility: hidden
+    height: 0
     opacity: 0 
     &.active
-        display: block
+        visibility: visible
+        height: auto
         opacity: 1               
 
 /*** Slider Presentation ***/
